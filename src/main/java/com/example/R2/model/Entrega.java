@@ -4,10 +4,9 @@ import java.util.Date;
 
 public class Entrega {
     //Atributos da classe
-    private long idCount; //Varíavel auxiliar para ID
-    private long id;
+    private Long id;
     private Pedido pedido;
-    private long idPedido;
+    private Long idPedido;
     private Date dataEstimada;
     private String statusEntrega;
     private Double taxaEntrega;
@@ -17,8 +16,8 @@ public class Entrega {
     public Entrega() {}
 
     //Construtor completo
-    public Entrega(Pedido pedido, long idPedido, Date dataEstimada, String statusEntrega, Double taxaEntrega, String metodoEntrega) {
-        this.id = idCount++; //Id sempre vai icrementar +1
+    public Entrega(Long id, Pedido pedido, Long idPedido, Date dataEstimada, String statusEntrega, Double taxaEntrega, String metodoEntrega) {
+        this.id = id;
         this.pedido = pedido;
         this.idPedido = idPedido;
         this.dataEstimada = dataEstimada;
@@ -28,10 +27,10 @@ public class Entrega {
     }
 
     //Getters and Setters
-    public long getId() {
+    public Long getId() {
         return id;
     }
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
     public Pedido getPedido() {
@@ -40,10 +39,10 @@ public class Entrega {
     public void setPedido(Pedido pedido) {
         this.pedido = pedido;
     }
-    public long getIdPedido() {
+    public Long getIdPedido() {
         return idPedido;
     }
-    public void setIdPedido(long idPedido) {
+    public void setIdPedido(Long idPedido) {
         this.idPedido = idPedido;
     }
     public Date getDataEstimada() {

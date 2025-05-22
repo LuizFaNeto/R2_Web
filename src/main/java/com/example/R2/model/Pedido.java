@@ -4,24 +4,23 @@ import java.util.Date;
 
 public class Pedido {
     //Atributos da classe
-    private long idCount = 1; //Variável auxiliar do ID
-    private long id;
-    private long idUsuario;
-    Usuario Usuario;
-    Date data;
-    String status;
-    Double valorTotal;
-    String enderecoEntrega;
-    Produto itens;
+    private Long id;
+    private Long idUsuario;
+    private Usuario usuario;
+    private Date data;
+    private String status;
+    private Double valorTotal;
+    private String enderecoEntrega;
+    private Produto itens;
 
     //Contrutor para importar atributos da classe
     public Pedido() {}
 
     // Contrutor completo
-    public Pedido(long idUsuario, Usuario usuario, Date data, String status, Double valorTotal, String enderecoEntrega, Produto itens) {
-        this.id = idCount++; //Incrementa sempre o ID
+    public Pedido(Long id, Long idUsuario, Usuario usuario, Date data, String status, Double valorTotal, String enderecoEntrega, Produto itens) {
+        this.id = id;
         this.idUsuario = idUsuario;
-        Usuario = usuario;
+        this.usuario = usuario;
         this.data = data;
         this.status = status;
         this.valorTotal = valorTotal;
@@ -30,23 +29,23 @@ public class Pedido {
     }
 
     //Getters and Setters
-    public long getId() {
+    public Long getId() {
         return id;
     }
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
-    public long getIdUsuario() {
+    public Long getIdUsuario() {
         return idUsuario;
     }
-    public void setIdUsuario(long idUsuario) {
+    public void setIdUsuario(Long idUsuario) {
         this.idUsuario = idUsuario;
     }
     public Usuario getUsuario() {
-        return Usuario;
+        return usuario;
     }
     public void setUsuario(Usuario usuario) {
-        Usuario = usuario;
+        this.usuario = usuario;
     }
     public Date getData() {
         return data;

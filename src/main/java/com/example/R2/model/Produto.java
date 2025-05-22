@@ -2,7 +2,6 @@ package com.example.R2.model;
 
 public class Produto {
     //Atributos da classe
-    private long idCount = 1; //Variável auxiliar do ID
     private Long id;
     private String nome;
     private String descricao;
@@ -17,8 +16,8 @@ public class Produto {
     public Produto() {}
 
     //Contrutor completo
-    public Produto(String nome, String descricao, Double preco, char tamanho, String cor, String categoria, Foto imagem, int quantidadeEstoque) {
-        this.id = idCount++; //Incrementa sempre o ID
+    public Produto(Long id, String nome, String descricao, Double preco, char tamanho, String cor, String categoria, Foto imagem, int quantidadeEstoque) {
+        this.id = id;
         this.nome = nome;
         this.descricao = descricao;
         this.preco = preco;

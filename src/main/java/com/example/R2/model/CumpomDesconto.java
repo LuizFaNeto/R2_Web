@@ -4,8 +4,7 @@ import java.util.Date;
 
 public class CumpomDesconto {
     //Atributos da classe
-    private long idCount = 1; //Váriavel auxiliar para ID
-    private long id;
+    private Long id;
     private String codigo;
     private String descricao;
     private Double valorDesconto;
@@ -15,8 +14,8 @@ public class CumpomDesconto {
     public CumpomDesconto() {}
 
     //Construtor completo
-    public CumpomDesconto(String codigo, String descricao, Double valorDesconto, Date validade) {
-        this.id = idCount++; //Id sempre vai icrementar +1
+    public CumpomDesconto(Long id, String codigo, String descricao, Double valorDesconto, Date validade) {
+        this.id = id;
         this.codigo = codigo;
         this.descricao = descricao;
         this.valorDesconto = valorDesconto;
@@ -24,10 +23,10 @@ public class CumpomDesconto {
     }
 
     // Getter and Setters
-    public long getId() {
+    public Long getId() {
         return id;
     }
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
     public String getCodigo() {

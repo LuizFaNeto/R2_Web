@@ -2,7 +2,6 @@ package com.example.R2.model;
 
 public class Usuario {
     //Atributos da classe
-    private long idCount = 1; //Váriavel auxiliar do ID
     private Long id;
     private String nome;
     private String email;
@@ -15,8 +14,8 @@ public class Usuario {
     public Usuario() {}
 
     //Contrutor completo
-    public Usuario(String nome, String email, String senha, boolean tipo, String endereco, Pedido historicoCompra) {
-        this.id = idCount++; //Incrementa sempre o ID
+    public Usuario(Long id, String nome, String email, String senha, boolean tipo, String endereco, Pedido historicoCompra) {
+        this.id = id;
         this.nome = nome;
         this.email = email;
         this.senha = senha;

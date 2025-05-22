@@ -2,10 +2,9 @@ package com.example.R2.model;
 
 public class ItemPedido {
     //Atributos da classe
-    private long idCount = 1; //Variável auxiliar para o ID
-    private long id;
-    private long idPedido;
-    private long idProduto;
+    private Long id;
+    private Long idPedido;
+    private Long idProduto;
     Pedido Pedido;
     Produto Produto;
     int quantidade;
@@ -15,8 +14,8 @@ public class ItemPedido {
     public ItemPedido() {}
 
     //Contrutor completo
-    public ItemPedido(long id, long idPedido, long idProduto, Pedido pedido, Produto produto, int quantidade, Double precoUnitario) {
-        this.id = idCount++; //Icrementa sempre o ID
+    public ItemPedido(Long id, Long idPedido, Long idProduto, Pedido pedido, Produto produto, int quantidade, Double precoUnitario) {
+        this.id = id;
         this.idPedido = idPedido;
         this.idProduto = idProduto;
         Pedido = pedido;
@@ -26,19 +25,19 @@ public class ItemPedido {
     }
 
     //Getters e Setters
-    public long getId() {
+    public Long getId() {
         return id;
     }
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
-    public long getIdPedido() {
+    public Long getIdPedido() {
         return idPedido;
     }
-    public void setIdPedido(long idPedido) {
+    public void setIdPedido(Long idPedido) {
         this.idPedido = idPedido;
     }
-    public long getIdProduto() {
+    public Long getIdProduto() {
         return idProduto;
     }
     public void setIdProduto(long idProduto) {
