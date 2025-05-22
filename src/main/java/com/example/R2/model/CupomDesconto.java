@@ -2,7 +2,7 @@ package com.example.R2.model;
 
 import java.util.Date;
 
-public class CumpomDesconto {
+public class CupomDesconto {
     //Atributos da classe
     private Long id;
     private String codigo;
@@ -11,10 +11,10 @@ public class CumpomDesconto {
     private Date validade;
 
     //Contrutor somente para importar os atributos da classe
-    public CumpomDesconto() {}
+    public CupomDesconto() {}
 
     //Construtor completo
-    public CumpomDesconto(Long id, String codigo, String descricao, Double valorDesconto, Date validade) {
+    public CupomDesconto(Long id, String codigo, String descricao, Double valorDesconto, Date validade) {
         this.id = id;
         this.codigo = codigo;
         this.descricao = descricao;
