@@ -9,13 +9,13 @@ public class UsuarioRequestDTO {
     private String senha;
     private boolean tipo;
     private String endereco;
-    private PedidoRequestDTO historicoCompra;
+    private Pedido historicoCompra;
 
     //Contrutor para importar os atributos da classe
     public UsuarioRequestDTO() {}
 
     //Contrutor completo
-    public UsuarioRequestDTO(String nome, String email, String senha, boolean tipo, String endereco, PedidoRequestDTO historicoCompra) {
+    public UsuarioRequestDTO(String nome, String email, String senha, boolean tipo, String endereco, Pedido historicoCompra) {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
@@ -55,10 +55,10 @@ public class UsuarioRequestDTO {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-    public PedidoRequestDTO getHistoricoCompra() {
+    public Pedido getHistoricoCompra() {
         return historicoCompra;
     }
-    public void setHistoricoCompra(PedidoRequestDTO historicoCompra) {
+    public void setHistoricoCompra(Pedido historicoCompra) {
         this.historicoCompra = historicoCompra;
     }
 }

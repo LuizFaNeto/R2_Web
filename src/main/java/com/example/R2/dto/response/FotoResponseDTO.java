@@ -5,7 +5,7 @@ import com.example.R2.model.Produto;
 public class FotoResponseDTO {
     //Atribudos da classe
     private Long id;
-    private ProdutoResponseDTO produto;
+    private Produto produto;
     private Long idProduto;
     private String imagem;
     private String descricao;
@@ -14,7 +14,7 @@ public class FotoResponseDTO {
     public FotoResponseDTO() {}
 
     //Construtor completo
-    public FotoResponseDTO(Long id, ProdutoResponseDTO produto, Long idProduto, String imagem, String descricao) {
+    public FotoResponseDTO(Long id, Produto produto, Long idProduto, String imagem, String descricao) {
         this.id = id;
         this.produto = produto;
         this.idProduto = idProduto;
@@ -26,7 +26,7 @@ public class FotoResponseDTO {
     public Long getId() {
         return id;
     }
-    public ProdutoResponseDTO getProduto() {
+    public Produto getProduto() {
         return produto;
     }
     public Long getIdProduto() {

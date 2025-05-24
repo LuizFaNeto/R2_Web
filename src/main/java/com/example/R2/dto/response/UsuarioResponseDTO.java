@@ -10,13 +10,13 @@ public class UsuarioResponseDTO {
     private String senha;
     private boolean tipo;
     private String endereco;
-    private PedidoResponseDTO historicoCompra;
+    private Pedido historicoCompra;
 
     //Construtor para importar classe
     public UsuarioResponseDTO() {}
 
     //Construtor completo
-    public UsuarioResponseDTO(Long id, String nome, String email, String senha, boolean tipo, String endereco, PedidoResponseDTO historicoCompra) {
+    public UsuarioResponseDTO(Long id, String nome, String email, String senha, boolean tipo, String endereco, Pedido historicoCompra) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -45,7 +45,7 @@ public class UsuarioResponseDTO {
     public String getEndereco() {
         return endereco;
     }
-    public PedidoResponseDTO getHistoricoCompra() {
+    public Pedido getHistoricoCompra() {
         return historicoCompra;
     }
 }

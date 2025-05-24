@@ -1,8 +1,10 @@
 package com.example.R2.dto.request;
 
+import com.example.R2.model.Produto;
+
 public class EstoqueRequestDTO {
     //Atributos da classe
-    private ProdutoRequestDTO produto;
+    private Produto produto;
     private Long idProduto;
     private int quantidadeDisponivel;
 
@@ -10,17 +12,17 @@ public class EstoqueRequestDTO {
     public EstoqueRequestDTO() {}
 
     //Construtor completo
-    public EstoqueRequestDTO(ProdutoRequestDTO produto, Long idProduto, int quantidadeDisponivel) {
+    public EstoqueRequestDTO(Produto produto, Long idProduto, int quantidadeDisponivel) {
         this.produto = produto;
         this.idProduto = idProduto;
         this.quantidadeDisponivel = quantidadeDisponivel;
     }
 
     //Getter and Setters
-    public ProdutoRequestDTO getProduto() {
+    public Produto getProduto() {
         return produto;
     }
-    public void setProduto(ProdutoRequestDTO produto) {
+    public void setProduto(Produto produto) {
         this.produto = produto;
     }
     public Long getIdProduto() {

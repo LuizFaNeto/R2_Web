@@ -8,18 +8,18 @@ import java.util.Date;
 public class PedidoRequestDTO {
     //Atributos da classe
     private Long idUsuario;
-    private UsuarioRequestDTO usuario;
+    private Usuario usuario;
     private Date data;
     private String status;
     private Double valorTotal;
     private String enderecoEntrega;
-    private ProdutoRequestDTO itens;
+    private Produto itens;
 
     //Contrutor para importar atributos da classe
     public PedidoRequestDTO() {}
 
     // Contrutor completo
-    public PedidoRequestDTO(Long idUsuario, UsuarioRequestDTO usuario, Date data, String status, Double valorTotal, String enderecoEntrega, ProdutoRequestDTO itens) {
+    public PedidoRequestDTO(Long idUsuario, Usuario usuario, Date data, String status, Double valorTotal, String enderecoEntrega, Produto itens) {
         this.idUsuario = idUsuario;
         this.usuario = usuario;
         this.data = data;
@@ -36,10 +36,10 @@ public class PedidoRequestDTO {
     public void setIdUsuario(Long idUsuario) {
         this.idUsuario = idUsuario;
     }
-    public UsuarioRequestDTO getUsuario() {
+    public Usuario getUsuario() {
         return usuario;
     }
-    public void setUsuario(UsuarioRequestDTO usuario) {
+    public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
     public Date getData() {
@@ -66,10 +66,10 @@ public class PedidoRequestDTO {
     public void setEnderecoEntrega(String enderecoEntrega) {
         this.enderecoEntrega = enderecoEntrega;
     }
-    public ProdutoRequestDTO getItens() {
+    public Produto getItens() {
         return itens;
     }
-    public void setItens(ProdutoRequestDTO itens) {
+    public void setItens(Produto itens) {
         this.itens = itens;
     }
 }

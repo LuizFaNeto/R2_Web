@@ -24,13 +24,14 @@ public class PedidoRepository {
     }
 
     //Save (Create)
-    public void save (Pedido pedido){
+    public Pedido save (Pedido pedido){
         pedido.setId(nextId++);
         pedidos.add(pedido);
+        return pedido;
     }
 
     //Update (Update)
-    public void update (Pedido pedido){
+    public Pedido update (Pedido pedido){
         pedidos.stream().filter(p -> p.getId().equals(pedido.getId()))
                 .findFirst().ifPresentOrElse(p1 -> {
                     p1.setData(pedido.getData());
@@ -43,6 +44,7 @@ public class PedidoRepository {
                 }, () -> {
                     throw new RuntimeException("Pedido não encontrado para atualização.");
                 });
+                return pedido;
     }
 
     //Delete By Id (Delete)

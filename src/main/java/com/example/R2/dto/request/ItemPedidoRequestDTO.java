@@ -7,8 +7,8 @@ public class ItemPedidoRequestDTO {
     //Atributos da classe
     private Long idPedido;
     private Long idProduto;
-    private PedidoRequestDTO pedido;
-    private ProdutoRequestDTO produto;
+    private Pedido pedido;
+    private Produto produto;
     private int quantidade;
     private Double precoUnitario;
 
@@ -16,7 +16,8 @@ public class ItemPedidoRequestDTO {
     public ItemPedidoRequestDTO() {}
 
     //Contrutor completo
-    public ItemPedidoRequestDTO(Long idPedido, Long idProduto, PedidoRequestDTO pedido, ProdutoRequestDTO produto, int quantidade, Double precoUnitario) {
+    public ItemPedidoRequestDTO(Long idPedido, Long idProduto, Pedido pedido, Produto
+            produto, int quantidade, Double precoUnitario) {
         this.idPedido = idPedido;
         this.idProduto = idProduto;
         this.pedido = pedido;
@@ -38,16 +39,16 @@ public class ItemPedidoRequestDTO {
     public void setIdProduto(long idProduto) {
         this.idProduto = idProduto;
     }
-    public PedidoRequestDTO getPedido() {
+    public Pedido getPedido() {
         return pedido;
     }
-    public void setPedido(PedidoRequestDTO pedido) {
+    public void setPedido(Pedido pedido) {
         this.pedido = pedido;
     }
-    public ProdutoRequestDTO getProduto() {
+    public Produto getProduto() {
         return produto;
     }
-    public void setProduto(ProdutoRequestDTO produto) {
+    public void setProduto(Produto produto) {
         this.produto = produto;
     }
     public int getQuantidade() {

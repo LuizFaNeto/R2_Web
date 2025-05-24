@@ -26,13 +26,14 @@ public class ItemPedidoRepository {
     }
 
     //Save (Create)
-    public void save (ItemPedido itemPedido){
+    public ItemPedido save (ItemPedido itemPedido){
         itemPedido.setId(nextId++);
         itensPedidos.add(itemPedido);
+        return itemPedido;
     }
 
     //Update (Update)
-    public void update(ItemPedido itemPedido){
+    public ItemPedido update(ItemPedido itemPedido){
         itensPedidos.stream().filter(ip -> ip.getId().equals(itemPedido.getId()))
                 .findFirst().ifPresentOrElse(ip1 -> {
                    ip1.setPedido(itemPedido.getPedido());
@@ -44,6 +45,7 @@ public class ItemPedidoRepository {
                 }, () -> {
                     throw new RuntimeException("Item pedido não encontrado para atualização.");
                 });
+                return itemPedido;
     }
 
     //Delete By Id (Delete)

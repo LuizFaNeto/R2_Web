@@ -8,8 +8,8 @@ public class ItemPedidoResponseDTO {
     private Long id;
     private Long idPedido;
     private Long idProduto;
-    private PedidoResponseDTO pedido;
-    private ProdutoResponseDTO produto;
+    private Pedido pedido;
+    private Produto produto;
     private int quantidade;
     private Double precoUnitario;
 
@@ -17,7 +17,7 @@ public class ItemPedidoResponseDTO {
     public ItemPedidoResponseDTO() {}
 
     //Construtor completo
-    public ItemPedidoResponseDTO(Long id, Long idPedido, Long idProduto, PedidoResponseDTO pedido, ProdutoResponseDTO produto, int quantidade, Double precoUnitario) {
+    public ItemPedidoResponseDTO(Long id, Long idPedido, Long idProduto, Pedido pedido, Produto produto, int quantidade, Double precoUnitario) {
         this.id = id;
         this.idPedido = idPedido;
         this.idProduto = idProduto;
@@ -37,10 +37,10 @@ public class ItemPedidoResponseDTO {
     public Long getIdProduto() {
         return idProduto;
     }
-    public PedidoResponseDTO getPedido() {
+    public Pedido getPedido() {
         return pedido;
     }
-    public ProdutoResponseDTO getProduto() {
+    public Produto getProduto() {
         return produto;
     }
     public int getQuantidade() {

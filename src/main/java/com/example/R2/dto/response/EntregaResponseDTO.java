@@ -7,7 +7,7 @@ import java.util.Date;
 public class EntregaResponseDTO {
     //Atributos da classe
     private Long id;
-    private PedidoResponseDTO pedido;
+    private Pedido pedido;
     private Long idPedido;
     private Date dataEstimada;
     private String statusEntrega;
@@ -18,7 +18,7 @@ public class EntregaResponseDTO {
     public EntregaResponseDTO() {}
 
     //Contrutor completo
-    public EntregaResponseDTO(Long id, PedidoResponseDTO pedido, Long idPedido, Date dataEstimada, String statusEntrega, Double taxaEntrega, String metodoEntrega) {
+    public EntregaResponseDTO(Long id, Pedido pedido, Long idPedido, Date dataEstimada, String statusEntrega, Double taxaEntrega, String metodoEntrega) {
         this.id = id;
         this.pedido = pedido;
         this.idPedido = idPedido;
@@ -32,7 +32,7 @@ public class EntregaResponseDTO {
     public Long getId() {
         return id;
     }
-    public PedidoResponseDTO getPedido() {
+    public Pedido getPedido() {
         return pedido;
     }
     public Long getIdPedido() {

@@ -21,18 +21,19 @@ public class EstoqueRepository {
     }
 
     //Find By Id (Read)
-    public Optional<Estoque> FindById (Long id){
+    public Optional<Estoque> findById (Long id){
         return estoques.stream().filter(e -> e.getId().equals(id)).findFirst();
     }
 
     //Save (Create)
-    public void save (Estoque estoque){
+    public Estoque save (Estoque estoque){
         estoque.setId(nextId++);
         estoques.add(estoque);
+        return estoque;
     }
 
     //Update (Update)
-    public void update(Estoque estoque){
+    public Estoque update(Estoque estoque){
         estoques.stream().filter(e -> e.getId().equals(estoque.getId()))
                 .findFirst().ifPresentOrElse(e1 -> {
                     e1.setProduto(estoque.getProduto());
@@ -41,6 +42,7 @@ public class EstoqueRepository {
                 }, () -> {
                     throw new RuntimeException("Estoque não encontrado para atualização");
                 });
+                return estoque;
     }
 
     //Delete By Id (Delete)

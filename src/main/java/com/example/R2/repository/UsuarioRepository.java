@@ -26,13 +26,14 @@ public class UsuarioRepository {
     }
 
     //Save (Create)
-    public void save (Usuario usuario){
+    public Usuario save (Usuario usuario){
         usuario.setId(nextId++);
         usuarios.add(usuario);
+        return usuario;
     }
 
     //Update (Update)
-    public void update (Usuario usuario){
+    public Usuario update (Usuario usuario){
         usuarios.stream().filter(u -> u.getId().equals(usuario.getId()))
                 .findFirst().ifPresentOrElse(u1 -> {
                     u1.setEmail(usuario.getEmail());
@@ -44,8 +45,7 @@ public class UsuarioRepository {
                 }, () -> {
                     throw new RuntimeException("Usuário não encontrado para atualização.");
                 });
-
-
+                return usuario;
     }
 
     //Delete By Id (Delete)

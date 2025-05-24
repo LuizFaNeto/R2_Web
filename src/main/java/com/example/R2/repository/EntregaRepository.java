@@ -26,13 +26,14 @@ public class EntregaRepository {
     }
 
     //Save (Create)
-    public void save (Entrega entrega){
+    public Entrega save (Entrega entrega){
         entrega.setId(nextId++);
         entregas.add(entrega);
+        return entrega;
     }
 
     //Update (Update)
-    public void update(Entrega entrega){
+    public Entrega update(Entrega entrega){
         entregas.stream().filter(e -> e.getId().equals(entrega.getId()))
                 .findFirst().ifPresentOrElse(e1 -> {
                     e1.setDataEstimada(entrega.getDataEstimada());
@@ -44,6 +45,7 @@ public class EntregaRepository {
                 },() -> {
                     throw new RuntimeException("Entrega não encontrada para atualização");
                 });
+                return entrega;
     }
 
     //Delete By Id (Delete)

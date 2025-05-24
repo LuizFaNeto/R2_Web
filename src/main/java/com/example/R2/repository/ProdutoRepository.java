@@ -26,13 +26,14 @@ public class ProdutoRepository {
     }
 
     //Save (Create)
-    public void save(Produto produto){
+    public Produto save(Produto produto){
         produto.setId(nextId);
         produtos.add(produto);
+        return produto;
     }
 
     //Update (Update)
-    public void update(Produto produto) {
+    public Produto update(Produto produto) {
         produtos.stream().filter(p -> p.getId().equals(produto.getId()))
                 .findFirst().ifPresentOrElse(p1 -> {
                     p1.setCategoria(produto.getCategoria());
@@ -45,6 +46,7 @@ public class ProdutoRepository {
                     p1.setTamanho(produto.getTamanho());
                 }, () -> { throw new RuntimeException("Produto não encontrado para atualização");
                          });
+                return produto;
     }
 
     //Delete By id (Delete)

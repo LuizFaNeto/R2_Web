@@ -26,13 +26,14 @@ public class FotoRepository {
     }
 
     //Save (Create)
-    public void save (Foto foto){
+    public Foto save (Foto foto){
         foto.setId(nextId++);
         fotos.add(foto);
+        return foto;
     }
 
     //Update (Update)
-    public void update(Foto foto){
+    public Foto update(Foto foto){
         fotos.stream().filter(f -> f.getId().equals(foto.getId()))
                 .findFirst().ifPresentOrElse(f1 -> {
                     f1.setDescricao(foto.getDescricao());
@@ -42,6 +43,7 @@ public class FotoRepository {
                 }, () -> {
                     throw new RuntimeException("Foto não encontrada para atualização.");
                 });
+                return foto;
     }
 
     //Delete By Id (Delete)

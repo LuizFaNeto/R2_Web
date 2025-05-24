@@ -26,13 +26,14 @@ public class CupomDescontoRepository {
     }
 
     //Save (Create)
-    public void save(CupomDesconto cupomDesconto){
+    public CupomDesconto save(CupomDesconto cupomDesconto){
         cupomDesconto.setId(nextId++);
         cuponsDescontos.add(cupomDesconto);
+        return cupomDesconto;
     }
 
     //Update (Update)
-    public void update(CupomDesconto cupomDesconto){
+    public CupomDesconto update(CupomDesconto cupomDesconto){
         cuponsDescontos.stream().filter(cd -> cd.getId().equals(cupomDesconto.getId()))
                 .findFirst().ifPresentOrElse(cd1 -> {
                     cd1.setCodigo(cupomDesconto.getCodigo());
@@ -42,6 +43,7 @@ public class CupomDescontoRepository {
                 }, () -> {
                     throw new RuntimeException("Cupom não encontrado para atualização");
                 });
+                return cupomDesconto;
     }
 
     //Delete By id (Delete)

@@ -11,14 +11,14 @@ public class ProdutoResponseDTO {
     private char tamanho;
     private String cor;
     private String categoria;
-    private FotoResponseDTO imagem;
+    private Foto imagem;
     private int quantidadeEstoque;
 
     //Construtor para importar os atributos
     public ProdutoResponseDTO() {}
 
     //Construtor completo
-    public ProdutoResponseDTO(Long id, String nome, String descricao, Double preco, char tamanho, String cor, String categoria, FotoResponseDTO imagem, int quantidadeEstoque) {
+    public ProdutoResponseDTO(Long id, String nome, String descricao, Double preco, char tamanho, String cor, String categoria, Foto imagem, int quantidadeEstoque) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
@@ -52,7 +52,7 @@ public class ProdutoResponseDTO {
     public String getCategoria() {
         return categoria;
     }
-    public FotoResponseDTO getImagem() {
+    public Foto getImagem() {
         return imagem;
     }
     public int getQuantidadeEstoque() {

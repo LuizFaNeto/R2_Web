@@ -5,7 +5,7 @@ import com.example.R2.model.Produto;
 public class EstoqueResponseDTO {
     //Atributos da classe
     private Long id;
-    private ProdutoResponseDTO produto;
+    private Produto produto;
     private Long idProduto;
     private int quantidadeDisponivel;
 
@@ -13,7 +13,7 @@ public class EstoqueResponseDTO {
     public EstoqueResponseDTO() {}
 
     //Construtor completo
-    public EstoqueResponseDTO(Long id, ProdutoResponseDTO produto, Long idProduto, int quantidadeDisponivel) {
+    public EstoqueResponseDTO(Long id, Produto produto, Long idProduto, int quantidadeDisponivel) {
         this.id = id;
         this.produto = produto;
         this.idProduto = idProduto;
@@ -24,7 +24,7 @@ public class EstoqueResponseDTO {
     public Long getId() {
         return id;
     }
-    public ProdutoResponseDTO getProduto() {
+    public Produto getProduto() {
         return produto;
     }
     public Long getIdProduto() {

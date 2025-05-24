@@ -4,7 +4,7 @@ import com.example.R2.model.Produto;
 
 public class FotoRequestDTO {
     //Atribudos da classe
-    private ProdutoRequestDTO produto;
+    private Produto produto;
     private Long idProduto;
     private String imagem;
     private String descricao;
@@ -13,7 +13,7 @@ public class FotoRequestDTO {
     public FotoRequestDTO() {}
 
     //Contrutor completo
-    public FotoRequestDTO(ProdutoRequestDTO produto, Long idProduto, String imagem, String descricao) {
+    public FotoRequestDTO(Produto produto, Long idProduto, String imagem, String descricao) {
         this.produto = produto;
         this.idProduto = idProduto;
         this.imagem = imagem;
@@ -21,10 +21,10 @@ public class FotoRequestDTO {
     }
 
     //Getter and Setters
-    public ProdutoRequestDTO getProduto() {
+    public Produto getProduto() {
         return produto;
     }
-    public void setProduto(ProdutoRequestDTO produto) {
+    public void setProduto(Produto produto) {
         this.produto = produto;
     }
     public Long getIdProduto() {

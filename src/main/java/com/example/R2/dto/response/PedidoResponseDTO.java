@@ -9,18 +9,18 @@ public class PedidoResponseDTO {
     //Atributos da classe
     private Long id;
     private Long idUsuario;
-    private UsuarioResponseDTO usuario;
+    private Usuario usuario;
     private Date data;
     private String status;
     private Double valorTotal;
     private String enderecoEntrega;
-    private ProdutoResponseDTO itens;
+    private Produto itens;
 
     //Construtor para importar os atrubutos
     public PedidoResponseDTO() {}
 
     //Construtor completo
-    public PedidoResponseDTO(Long id, Long idUsuario, UsuarioResponseDTO usuario, Date data, String status, Double valorTotal, String enderecoEntrega, ProdutoResponseDTO itens) {
+    public PedidoResponseDTO(Long id, Long idUsuario, Usuario usuario, Date data, String status, Double valorTotal, String enderecoEntrega, Produto itens) {
         this.id = id;
         this.idUsuario = idUsuario;
         this.usuario = usuario;
@@ -38,7 +38,7 @@ public class PedidoResponseDTO {
     public Long getIdUsuario() {
         return idUsuario;
     }
-    public UsuarioResponseDTO getUsuario() {
+    public Usuario getUsuario() {
         return usuario;
     }
     public Date getData() {
@@ -53,7 +53,7 @@ public class PedidoResponseDTO {
     public String getEnderecoEntrega() {
         return enderecoEntrega;
     }
-    public ProdutoResponseDTO getItens() {
+    public Produto getItens() {
         return itens;
     }
 }

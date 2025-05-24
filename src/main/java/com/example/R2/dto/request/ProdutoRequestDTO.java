@@ -10,14 +10,14 @@ public class ProdutoRequestDTO {
     private char tamanho;
     private String cor;
     private String categoria;
-    private FotoRequestDTO imagem;
+    private Foto imagem;
     private int quantidadeEstoque;
 
     //Contrutor para importar atributos da classe
     public ProdutoRequestDTO() {}
 
     //Contrutor completo
-    public ProdutoRequestDTO(String nome, String descricao, Double preco, char tamanho, String cor, String categoria, FotoRequestDTO imagem, int quantidadeEstoque) {
+    public ProdutoRequestDTO(String nome, String descricao, Double preco, char tamanho, String cor, String categoria, Foto imagem, int quantidadeEstoque) {
         this.nome = nome;
         this.descricao = descricao;
         this.preco = preco;
@@ -65,10 +65,10 @@ public class ProdutoRequestDTO {
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
-    public FotoRequestDTO getImagem() {
+    public Foto getImagem() {
         return imagem;
     }
-    public void setImagem(FotoRequestDTO imagem) {
+    public void setImagem(Foto imagem) {
         this.imagem = imagem;
     }
     public int getQuantidadeEstoque() {
